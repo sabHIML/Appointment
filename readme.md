@@ -1,5 +1,5 @@
 # Appointment
-Simple Web-based Appointment management calendar. 
+Simple Web-based Appointment management calendar. This is a good resource/project for learning php Namespace, psr-4 Autoloader, Design patterns, HTML5 local storage, AJAX on raw JS, RESTful API by developing own simple MVC framework.
 
 ### Features
 The high level features are as follows: 
