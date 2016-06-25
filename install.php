@@ -9,14 +9,13 @@ if(php_sapi_name() !== 'cli') {
 $command = "composer dump-autoload -o";
 $output = array();
 exec($command,$output,$worked);
-switch($worked){
-    case 0:
-        echo "Project successfully installed \n";
-        break;
-    case 1:
-        echo "There was an error during work with composer \n";
-        echo "Aborted \n";
-        break;
+
+if($worked === 0) {
+    echo "Project successfully installed \n";
+} else {
+    echo "There was an error while working with composer \n";
+    echo "Aborted \n";
+    exit;
 }
 
 require_once 'vendor/autoload.php';
