@@ -19,9 +19,9 @@ var showMessage = function (_msg) {
         hideMessage();
     }, 2000);
 };
+
 var hideMessage = function () {
     document.getElementById("message-area").style.display = 'none';
-
 };
 
 var loadDataOnTable = function(jsonData) {
@@ -53,7 +53,7 @@ var postData = function() {
         savedData = JSON.parse(localStorage.getItem('data')) || [];
         savedData.push(data);
         localStorage.setItem('data', JSON.stringify(savedData));
-        showMessage('Saved in offline mode!');
+        showMessage('Saved in offline mode! System will sync your data while connection established .');
 
         return false;
     }
@@ -127,7 +127,7 @@ var modeChanged = function() {
         return false;
 
     unPostedData = JSON.parse(localStorage.getItem('data'));
-    console.log(unPostedData);
+    //console.log(unPostedData);
     showMessage('Syncing..');
     for (var i = 0; i < unPostedData.length; i++) {
         postAjax(unPostedData.pop());
