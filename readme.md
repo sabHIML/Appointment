@@ -4,7 +4,7 @@ Simple Web-based Appointment management calendar. This is a good resource/projec
 ### Features
 The high level features are as follows: 
 
-* View a table of the current appointments for current month. 
+* View a table of the current appointments for next 30 days. 
 * Add an appointment using a name and email address. Disallow adding appointments 
 on days that already have one. 
 * Work in offline mode and sync while get internet connection.
